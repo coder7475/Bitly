@@ -8,6 +8,7 @@ A URL shortening service that converts long URLs to shorter, manageable links.
         - Optionally, users should be able to specify a custom alias for their shortened URL (ie. "www.short.ly/my-custom-alias")
         - Optionally, users should be able to specify an expiration date for their shortened URL. 
     2. Users should be able to access the original URL by using the shortened URL.
+    3. Links should expire after a default timespan
 
 ### Out of Scope
 
@@ -36,6 +37,12 @@ A URL shortening service that converts long URLs to shorter, manageable links.
 - Assume average URL length is 100.
 - Storage requirement over 10 years: 365 billion * 100 bytes = 36.5 TB
 
+
+## Core Entities
+
+1. *Original URL*: The original long URL that user wants to shorten
+2. *Short URL*: The shortened URL that user receives and can share
+3. *User*: Represents the user who created shorten URL
 
 
 
