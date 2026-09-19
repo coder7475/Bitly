@@ -69,7 +69,8 @@ GET /{short_code}
 -> HTTP 302 Redirect to the original long URL
 ```
 
-
+For security add an API Key to restrict to the api use.
+For cleaning expired api run an background job.
 
 
 
