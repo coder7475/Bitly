@@ -44,7 +44,30 @@ A URL shortening service that converts long URLs to shorter, manageable links.
 2. *Short URL*: The shortened URL that user receives and can share
 3. *User*: Represents the user who created shorten URL
 
+## API Design
 
+1. Shorten URL
+```
+// Shorten a URL
+POST /urls
+{
+  "long_url": "https://www.example.com/some/very/long/url",
+    "custom_alias": "optional_custom_alias",
+    "expiration_date": "optional_expiration_date"
+}
+----> Response:
+      {
+        "short_url": "http://short.ly/abc123"
+      }
+```
+
+2. Get shortened URL
+
+```
+// Redirect to Original URL
+GET /{short_code}
+-> HTTP 302 Redirect to the original long URL
+```
 
 
 
